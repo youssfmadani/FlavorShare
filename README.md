@@ -1,31 +1,79 @@
-<<<<<<< HEAD
-# FlavorShare
-=======
-# Frontend
+# 🍽️ FlavorShare - Plateforme de Partage de Recettes de Cuisine
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+**FlavorShare** est une application web collaborative développée avec Angular. Elle permet aux utilisateurs de consulter, commenter, noter et partager des recettes culinaires. Ce projet a été conçu pour renforcer les compétences en développement frontend moderne, notamment Angular, les appels API, le routing, la gestion des formulaires et l’organisation modulaire.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## 📌 Fonctionnalités
 
-## Code scaffolding
+### Utilisateur non connecté :
+- 🔍 Recherche de recettes par nom ou chef
+- 🧾 Consultation des recettes : nom, ingrédients, étapes, photo, catégorie
+- 🧩 Filtrage par catégorie (végétarien, dessert, etc.) ou ingrédient principal
+- ⭐ Notation des recettes (1 à 5 étoiles)
+- 💬 Lecture des commentaires
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Utilisateur connecté :
+- 🔐 Authentification via formulaire de login
+- 📝 Ajouter des commentaires
+- 🧑‍🍳 Proposer ses propres recettes _(option bonus)_
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🧱 Structure des Composants Angular
 
-## Running unit tests
+- `navbar` : Barre de navigation + barre de recherche
+- `home` : Page d’accueil avec recettes populaires
+- `recipe-list` : Liste filtrable des recettes
+- `recipe-detail` : Détail complet d’une recette + système de notes/commentaires
+- `login` : Authentification de l’utilisateur
+- `rating-system` : Système de notation (étoiles) et gestion des commentaires
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 🔧 Services Angular
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- `RecipeService` : Gestion des recettes (GET, POST, etc.)
+- `RatingService` : Gestion des notes et des commentaires
+- `AuthService` : Authentification et gestion de session utilisateur
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
->>>>>>> 6e3163a (La structure de Projet avec les composants principales)
+## 🧪 Technologies utilisées
+
+| Outil / Tech | Description |
+|--------------|-------------|
+| **Angular 16+** | Framework frontend |
+| **TypeScript** | Langage principal |
+| **HTML/CSS** | Structure et style |
+| **Tailwind CSS** ou **Bootstrap** | UI responsive |
+| **JSON Server / Firebase** | Backend mock / authentification |
+| **LocalStorage** | Gestion de session locale |
+| **Git/GitHub** | Suivi de version |
+| **Postman** | Test des appels API |
+| **Figma / Adobe XD** | Maquettage |
+
+---
+
+## 🎯 Objectifs pédagogiques
+
+- Maîtrise d'Angular (composants, services, routing, binding…)
+- Mise en place d’un système de notation/commentaires
+- Création d’une UI responsive et agréable
+- Intégration d’une API JSON
+- Implémentation de l'authentification
+- Documentation et présentation professionnelle
+
+---
+
+## 📁 Lancement du projet
+
+```bash
+# Cloner le projet
+git clone https://github.com/votre-utilisateur/flavorshare.git
+cd flavorshare
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
+ng serve
