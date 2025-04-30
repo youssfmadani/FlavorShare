@@ -1,0 +1,263 @@
+import {Food} from './app/shared/models/Food';
+import { Tag } from './app/shared/models/Tag';
+
+export const sample_foods: Food[] = [
+  {
+    id: '1',
+    name: 'Pizza Pepperoni',
+    cookTime: '10-20',
+    price: 10,
+    favorite: false,
+    origins: ['Italy'],
+    stars: 4.5,
+    imageUrl: 'assets/food-1.jpg',
+    tags: ['FastFood', 'Pizza', 'Lunch', 'Cheesy', 'Italian', 'Non-Vegetarian'],
+    details: 'A popular Italian-American dish featuring a crispy crust, rich tomato sauce, mozzarella cheese, and spicy pepperoni slices baked to perfection.'
+  },
+  {
+    id: '2',
+    name: 'Meatball',
+    price: 20,
+    cookTime: '20-30',
+    favorite: true,
+    origins: ['Persia', 'Middle East', 'China'],
+    stars: 4.7,
+    imageUrl: 'assets/food-2.jpg',
+    tags: ['SlowFood', 'Lunch', 'Protein-Rich', 'Traditional', 'Non-Vegetarian', 'MiddleEastern'],
+    details: 'Tender meatballs seasoned with herbs and spices, cooked slowly in a flavorful sauce, often served with rice or pasta for a hearty meal.'
+  },
+  {
+    id: '3',
+    name: 'Hamburger',
+    price: 5,
+    cookTime: '10-15',
+    favorite: false,
+    origins: ['Germany', 'USA'],
+    stars: 3.5,
+    imageUrl: 'assets/food-3.jpg',
+    tags: ['FastFood', 'Burger', 'Lunch', 'Classic', 'Beef', 'Grilled'],
+    details: 'A grilled beef patty served in a toasted bun with lettuce, tomato, onions, cheese, and sauces. A Western fast food staple.'
+  },
+  {
+    id: '4',
+    name: 'Fried Potatoes',
+    price: 2,
+    cookTime: '15-20',
+    favorite: true,
+    origins: ['Belgium', 'France'],
+    stars: 3.3,
+    imageUrl: 'assets/food-4.jpg',
+    tags: ['FastFood', 'Snack', 'Fry', 'SideDish', 'Vegetarian', 'Crispy'],
+    details: 'Golden crispy potato fries, lightly salted and deep-fried to perfection. A beloved snack or side dish served globally.'
+  },
+  {
+    id: '5',
+    name: 'Chicken Soup',
+    price: 11,
+    cookTime: '40-50',
+    favorite: false,
+    origins: ['India', 'Asia'],
+    stars: 3.0,
+    imageUrl: 'assets/food-5.jpg',
+    tags: ['SlowFood', 'Soup', 'ComfortFood', 'Healthy', 'Warm', 'Non-Vegetarian'],
+    details: 'A warm and comforting soup made from tender chicken pieces, aromatic herbs, and vegetables. Perfect for cold days or recovery meals.'
+  },
+  {
+    id: '6',
+    name: 'Vegetables Pizza',
+    price: 9,
+    cookTime: '40-50',
+    favorite: false,
+    origins: ['Italy'],
+    stars: 4.0,
+    imageUrl: 'assets/food-6.jpg',
+    tags: ['FastFood', 'Pizza', 'Lunch', 'Vegetarian', 'Italian', 'Cheesy'],
+    details: 'Loaded with fresh vegetables like bell peppers, onions, olives, and mushrooms on a classic pizza base with rich tomato sauce and mozzarella.'
+  },
+  {
+    id: '7',
+    name: 'Spicy Cheese Burger',
+    price: 12,
+    cookTime: '20-30',
+    favorite: false,
+    origins: ['India'],
+    stars: 4.0,
+    imageUrl: 'assets/food-7.jpg',
+    tags: ['FastFood', 'Burger', 'Spicy', 'Lunch', 'Non-Vegetarian', 'Fusion'],
+    details: 'A bold and flavorful burger with a spicy beef or chicken patty, jalapeños, hot sauce, and melted cheese. A fusion of Western fast food and Indian spice.'
+  },
+  {
+    id: '8',
+    name: 'Vegetables Magento Pizza',
+    price: 9,
+    cookTime: '45-50',
+    favorite: false,
+    origins: ['India'],
+    stars: 4.0,
+    imageUrl: 'assets/food-8.jpg',
+    tags: ['FastFood', 'Pizza', 'Lunch', 'Vegetarian', 'Fusion', 'Spiced'],
+    details: 'A colorful and exotic twist on traditional pizza, topped with spiced vegetables and Indian-inspired flavors on a soft crust.'
+  },
+  {
+    id: '9',
+    name: 'Beef Shawarma',
+    price: 13,
+    cookTime: '25-30',
+    favorite: true,
+    origins: ['Middle East'],
+    stars: 4.6,
+    imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.71Dw9o6j5CnZ7Wdk78KnywHaHa?cb=iwc1&w=500&h=500&rs=1&pid=ImgDetMain',
+    tags: ['FastFood', 'Wrap', 'Beef', 'Lunch', 'Spicy', 'Non-Vegetarian'],
+    details: 'Thinly sliced beef marinated in Middle Eastern spices, grilled and wrapped in pita with garlic sauce, pickles, and veggies.'
+  },
+  {
+    id: '10',
+    name: 'Sushi Platter',
+    price: 25,
+    cookTime: '50-60',
+    favorite: false,
+    origins: ['Japan'],
+    stars: 4.8,
+    imageUrl: 'https://tse3.mm.bing.net/th/id/OIP.Pa1qEnkDEIA2l37NkXOWxAHaHa?cb=iwc1&rs=1&pid=ImgDetMain',
+    tags: ['Seafood', 'Asian', 'Rice', 'Healthy', 'Dinner', 'Non-Vegetarian'],
+    details: 'An assorted platter of sushi including nigiri, sashimi, and maki rolls. Fresh fish and vinegared rice wrapped in seaweed.'
+  },
+  {
+    id: '11',
+    name: 'Falafel Wrap',
+    price: 7,
+    cookTime: '15-20',
+    favorite: true,
+    origins: ['Middle East'],
+    stars: 4.2,
+    imageUrl: 'https://th.bing.com/th/id/R.fc2b6731b6ae9bb8560ead9853e31e31?rik=jV65r%2f8JpgMiaw&pid=ImgRaw&r=0',
+    tags: ['Vegetarian', 'FastFood', 'Snack', 'Vegan', 'Healthy', 'Lunch'],
+    details: 'Crispy falafel balls made from chickpeas, herbs, and spices, wrapped in pita with tahini sauce, lettuce, tomato, and onion.'
+  },
+  {
+    id: '12',
+    name: 'Tacos Al Pastor',
+    price: 8,
+    cookTime: '20-25',
+    favorite: true,
+    origins: ['Mexico'],
+    stars: 4.4,
+    imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.JEaxwMxGPCm4H5lm4h4gCAHaE1?cb=iwc1&w=870&h=568&rs=1&pid=ImgDetMain',
+    tags: ['FastFood', 'Taco', 'Mexican', 'Spicy', 'Non-Vegetarian', 'Dinner'],
+    details: 'Pork marinated with pineapple and chili, cooked on a vertical spit and served on corn tortillas with onions and cilantro.'
+  },
+  {
+    id: '13',
+    name: 'Butter Chicken',
+    price: 16,
+    cookTime: '30-40',
+    favorite: false,
+    origins: ['India'],
+    stars: 4.7,
+    imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.FaTxjikvKm3mPgx595-TngHaE8?cb=iwc1&rs=1&pid=ImgDetMain',
+    tags: ['Dinner', 'Indian', 'Spicy', 'Non-Vegetarian', 'Curry'],
+    details: 'Creamy tomato-based curry with tender chicken pieces, butter, and spices. Usually served with naan or rice.'
+  },
+  {
+    id: '14',
+    name: 'Vegetarian Biryani',
+    price: 14,
+    cookTime: '35-45',
+    favorite: true,
+    origins: ['India'],
+    stars: 4.3,
+    imageUrl: 'https://www.gettyimages.com/photos/vegetarian-biryani',
+    tags: ['Vegetarian', 'Rice', 'Spiced', 'Indian', 'Dinner'],
+    details: 'Aromatic basmati rice layered with spiced vegetables and herbs, cooked slowly to blend flavors beautifully.'
+  },
+  {
+    id: '15',
+    name: 'Grilled Salmon',
+    price: 22,
+    cookTime: '25-30',
+    favorite: false,
+    origins: ['Norway'],
+    stars: 4.5,
+    imageUrl: 'https://www.gettyimages.com/photos/grilled-salmon',
+    tags: ['Seafood', 'Healthy', 'Dinner', 'Omega3', 'Non-Vegetarian'],
+    details: 'Fresh salmon fillet grilled and served with lemon butter sauce, seasonal vegetables, and herbs.'
+  },
+  {
+    id: '16',
+    name: 'Pasta Alfredo',
+    price: 11,
+    cookTime: '20-25',
+    favorite: true,
+    origins: ['Italy'],
+    stars: 4.2,
+    imageUrl: 'https://www.gettyimages.com/photos/pasta-alfredo',
+    tags: ['Pasta', 'Creamy', 'Italian', 'Lunch', 'Vegetarian'],
+    details: 'Creamy pasta made with fettuccine, butter, garlic, and parmesan cheese. A rich and indulgent Italian dish.'
+  },
+  {
+    id: '17',
+    name: 'Greek Salad',
+    price: 6,
+    cookTime: '10-15',
+    favorite: true,
+    origins: ['Greece'],
+    stars: 4.0,
+    imageUrl: 'https://www.gettyimages.com/photos/greek-salad',
+    tags: ['Salad', 'Healthy', 'Vegetarian', 'Vegan', 'ColdDish'],
+    details: 'A refreshing mix of cucumber, tomato, olives, red onion, and feta cheese dressed with olive oil and herbs.'
+  },
+  {
+    id: '18',
+    name: 'Shakshuka',
+    price: 10,
+    cookTime: '20-25',
+    favorite: false,
+    origins: ['Middle East', 'North Africa'],
+    stars: 4.4,
+    imageUrl: 'https://www.gettyimages.com/photos/shakshuka',
+    tags: ['Breakfast', 'Eggs', 'Spicy', 'Vegetarian', 'Brunch'],
+    details: 'Poached eggs cooked in a spicy tomato and pepper sauce, seasoned with cumin, paprika, and herbs. Served with bread.'
+  },
+  {
+    id: '19',
+    name: 'Chocolate Lava Cake',
+    price: 7,
+    cookTime: '15-20',
+    favorite: true,
+    origins: ['France'],
+    stars: 4.9,
+    imageUrl: 'https://www.gettyimages.com/photos/chocolate-lava-cake',
+    tags: ['Dessert', 'Chocolate', 'Sweet', 'Baked'],
+    details: 'A warm chocolate cake with a gooey molten center. Often served with vanilla ice cream or whipped cream.'
+  },
+  {
+    id: '20',
+    name: 'Pancakes with Maple Syrup',
+    price: 6,
+    cookTime: '10-15',
+    favorite: true,
+    origins: ['USA', 'Canada'],
+    stars: 4.6,
+    imageUrl: 'https://www.gettyimages.com/photos/pancakes-with-maple-syrup',
+    tags: ['Breakfast', 'Sweet', 'Dessert', 'Vegetarian'],
+    details: 'Fluffy pancakes stacked high and topped with butter and rich maple syrup. Perfect for a sweet start to your morning.'
+  }
+];
+
+
+export const sample_tags: Tag[] = [
+  { name: 'All', count: 8 },
+  { name: 'FastFood', count: 6 },
+  { name: 'Pizza', count: 3 },
+  { name: 'Lunch', count: 6 },
+  { name: 'SlowFood', count: 2 },
+  { name: 'Burger', count: 2 },
+  { name: 'Fry', count: 1 },
+  { name: 'Soup', count: 1 },
+  { name: 'Vegetarian', count: 3 },
+  { name: 'Non-Vegetarian', count: 5 },
+  { name: 'Spicy', count: 1 },
+  { name: 'Cheesy', count: 2 },
+  { name: 'Fusion', count: 2 },
+];
+
